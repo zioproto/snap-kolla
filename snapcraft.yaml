@@ -1,0 +1,25 @@
+name: kolla
+version: 3.0.2
+summary: OpenStack Kolla
+description: |
+  Containers and deployment tools for operating
+  OpenStack clouds.  
+
+confinement: classic
+grade: devel
+
+apps:
+  kolla-ansible:
+    command: kolla-ansible
+  kolla-build:
+    command: kolla-build
+  kolla-genpwd:
+    command: kolla-genpwd
+
+parts:
+  kolla:
+    plugin: python
+    python-version: python2
+    source: https://github.com/openstack/kolla
+    source-type: git
+    source-tag: 3.0.2
