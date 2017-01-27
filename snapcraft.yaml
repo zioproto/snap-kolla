@@ -1,4 +1,4 @@
-name: kolla
+name: zioproto-kolla
 version: 3.0.2
 summary: OpenStack Kolla
 description: |
@@ -11,10 +11,16 @@ grade: devel
 apps:
   kolla-ansible:
     command: kolla-ansible
+    aliases:
+      - kolla-ansible
   kolla-build:
     command: kolla-build
+    aliases:
+      - kolla-build
   kolla-genpwd:
     command: kolla-genpwd
+    aliases:
+      - kolla-genpwd
 
 parts:
   kolla:
