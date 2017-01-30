@@ -29,3 +29,8 @@ parts:
     source: https://github.com/openstack/kolla
     source-type: git
     source-tag: 3.0.2
+    python-packages:
+      - ansible
+    build-packages:
+      - libffi-dev
+      - libssl-dev
