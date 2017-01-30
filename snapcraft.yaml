@@ -25,10 +25,10 @@ apps:
 parts:
   kolla:
     plugin: python
-    python-version: python2
-    source: https://github.com/openstack/kolla
+    python-version: python3
+    source: https://github.com/zioproto/kolla
     source-type: git
-    source-tag: 3.0.2
+    source-branch: stable/newton
     python-packages:
       - ansible
     build-packages:
