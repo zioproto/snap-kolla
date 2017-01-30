@@ -25,7 +25,7 @@ apps:
 parts:
   kolla:
     plugin: python
-    python-version: python3
+    python-version: python2
     source: https://github.com/zioproto/kolla
     source-type: git
     source-branch: stable/newton
