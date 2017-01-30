@@ -1,5 +1,5 @@
 name: zioproto-kolla
-version: 3.0.2
+version: master
 summary: OpenStack Kolla
 description: |
   Containers and deployment tools for operating
@@ -28,9 +28,17 @@ parts:
     python-version: python3
     source: https://github.com/zioproto/kolla
     source-type: git
-    source-branch: stable/newton
+    source-branch: master
     python-packages:
       - ansible
     build-packages:
       - libffi-dev
       - libssl-dev
+  kolla-ansible:
+    plugin: python
+    python-version: python3
+    source: https://github.com/zioproto/kolla-ansible
+    source-type: git
+    source-branch: master
+    after:
+      - kolla
