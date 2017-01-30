@@ -31,6 +31,7 @@ parts:
     source-branch: master
     python-packages:
       - ansible
+    constraints: https://raw.githubusercontent.com/openstack/requirements/stable/newton/upper-constraints.txt
     build-packages:
       - libffi-dev
       - libssl-dev
