@@ -25,7 +25,7 @@ apps:
 parts:
   kolla:
     plugin: python
-    python-version: python3
+    python-version: python2
     source: https://github.com/zioproto/kolla
     source-type: git
     source-branch: master
@@ -37,7 +37,7 @@ parts:
       - libssl-dev
   kolla-ansible:
     plugin: python
-    python-version: python3
+    python-version: python2
     source: https://github.com/zioproto/kolla-ansible
     source-type: git
     source-branch: master
