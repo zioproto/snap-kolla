@@ -21,6 +21,10 @@ apps:
     command: kolla-genpwd
     aliases:
       - kolla-genpwd
+  ansible-playbook:
+    command: ansible-playbook
+    aliases:
+      - ansible-playbook
 
 parts:
   kolla:
@@ -28,18 +32,11 @@ parts:
     python-version: python2
     source: https://github.com/zioproto/kolla
     source-type: git
-    source-branch: master
+    source-branch: snap
     python-packages:
       - ansible
-    constraints: https://raw.githubusercontent.com/openstack/requirements/stable/newton/upper-constraints.txt
+      - git+https://github.com/zioproto/kolla-ansible@snap
+    constraints: https://raw.githubusercontent.com/openstack/requirements/master/upper-constraints.txt
     build-packages:
       - libffi-dev
       - libssl-dev
-  kolla-ansible:
-    plugin: python
-    python-version: python2
-    source: https://github.com/zioproto/kolla-ansible
-    source-type: git
-    source-branch: master
-    after:
-      - kolla
