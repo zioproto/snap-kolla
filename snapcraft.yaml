@@ -1,5 +1,5 @@
 name: zioproto-kolla
-version: master
+version: ocata
 summary: OpenStack Kolla
 description: |
   Containers and deployment tools for operating
@@ -32,10 +32,11 @@ parts:
     python-version: python2
     source: https://github.com/zioproto/kolla
     source-type: git
-    source-branch: snap
+    source-branch: snap-ocata
     python-packages:
       - ansible
-      - git+https://github.com/zioproto/kolla-ansible@snap
+      - git+https://github.com/zioproto/kolla-ansible@snap-ocata
+      - pbr
     constraints: https://raw.githubusercontent.com/openstack/requirements/master/upper-constraints.txt
     build-packages:
       - libffi-dev
