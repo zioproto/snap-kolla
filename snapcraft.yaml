@@ -30,12 +30,12 @@ parts:
   kolla:
     plugin: python
     python-version: python2
-    source: https://github.com/zioproto/kolla
+    source: https://github.com/openstack/kolla
     source-type: git
-    source-branch: snap-ocata
+    source-branch: stable/ocata
     python-packages:
       - ansible
-      - git+https://github.com/zioproto/kolla-ansible@snap-ocata
+      - git+https://github.com/openstack/kolla-ansible@stable/ocata
       - pbr
     constraints: https://raw.githubusercontent.com/openstack/requirements/master/upper-constraints.txt
     build-packages:
